@@ -18,10 +18,10 @@ export const PORTFOLIO_DATA = {
     name: "Precious Akpan",
     role: "Senior Web2.5 Architect",
     tagline: "Bridging Centralized Systems & Decentralized Protocols",
-    email: "alex@example.com",
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    email: "precious.akpan2000@gmail.com",
+    github: "https://github.com/precious-akpan",
+    linkedin: "https://www.linkedin.com/in/precious-christopher-akpan/",
+    twitter: "https://x.com/iron_lion_presh",
   },
   
   navigation: [

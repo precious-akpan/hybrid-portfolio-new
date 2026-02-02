@@ -71,7 +71,7 @@ export const CaseStudies = () => {
                                 ))}
                             </div>
                         </div>
-                        <Button variant="outline" className="w-fit gap-2">
+                        <Button variant="outline" className="w-fit gap-2" href={study.link} target="_blank">
                             View Case Study <ArrowUpRight size={16} />
                         </Button>
                     </div>
