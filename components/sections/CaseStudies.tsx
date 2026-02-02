@@ -7,9 +7,16 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export const CaseStudies = () => {
   const { caseStudies } = PORTFOLIO_DATA;
+  const [filter, setFilter] = useState("All");
+
+  const filteredStudies = caseStudies.filter(study => {
+    if (filter === "All") return true;
+    return study.type.includes(filter);
+  });
 
   return (
     <Section id="work" className="bg-slate-900/40">
@@ -19,20 +26,27 @@ export const CaseStudies = () => {
           <p className="text-slate-400">Deep dives into complex systems.</p>
         </div>
         <div className="flex gap-2">
-            <Badge variant="accent" className="cursor-pointer">All</Badge>
-            <Badge variant="outline" className="cursor-pointer hover:border-blue-500/50">Web3</Badge>
-            <Badge variant="outline" className="cursor-pointer hover:border-blue-500/50">Systems</Badge>
+            {["All", "Web3", "Systems"].map((category) => (
+                <Badge 
+                    key={category}
+                    onClick={() => setFilter(category)}
+                    variant={filter === category ? "accent" : "outline"} 
+                    className="cursor-pointer hover:border-blue-500/50 transition-colors"
+                >
+                    {category}
+                </Badge>
+            ))}
         </div>
       </div>
 
       <div className="space-y-8">
-        {caseStudies.map((study, idx) => (
+        {filteredStudies.map((study, idx) => (
           <motion.div
             key={study.id}
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: idx * 0.2 }}
+            layout // Smoothly animate layout changes when filtering
           >
             <Card hoverEffect className="group overflow-hidden">
                 <div className="grid md:grid-cols-[1.5fr,2fr] gap-8">

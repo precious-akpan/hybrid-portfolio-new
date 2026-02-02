@@ -75,6 +75,36 @@ My evolution from TypeScript/Node.js architecture to Solidity & Rust smart contr
 
   caseStudies: [
     {
+      id: "hop-protocol",
+      title: "Hop Protocol: Cross-Chain Bridge Architecture",
+      type: "Web3 / Infrastructure",
+      description: "Trustless bridge enabling instant token transfers between Layer 2 scaling solutions.",
+      problem: "Users faced 7-day withdrawal periods when moving assets from Optimistic Rollups to Ethereum mainnet, fragmenting liquidity.",
+      solution: "Implemented a system of Bonders to provide liquidity for instant withdrawals. Architected the L1<->L2 messaging layer using canonical bridges for settlement.",
+      impact: [
+        "Enabled sub-5-minute cross-chain transfers",
+        "Processed $1B+ in bridge volume",
+        "Zero liquidity loss incidents"
+      ],
+      stack: ["Solidity", "TypeScript", "Ethers.js", "The Graph"],
+      link: "#"
+    },
+    {
+      id: "drips-wave",
+      title: "Drips: Recurring Payment Protocol",
+      type: "Web3 / Protocol",
+      description: "NFT-driver streaming payments allowing one-to-many funds distribution.",
+      problem: "DAO contributors and open-source maintainers lacked a reliable way to receive recurring sustainable funding without high gas friction.",
+      solution: "Engineered 'Splits' and 'Drips' drivers using Cycle-based accounting. Optimized storage slots to allow thousands of streams to be processed in a single transaction.",
+      impact: [
+        "Recovered $15M+ in funding for public goods",
+        "Reduced claim gas costs by 40% using sub-graphs",
+        "Integrated by 50+ major DAOs"
+      ],
+      stack: ["Solidity", "Foundry", "Subgraph", "React"],
+      link: "#"
+    },
+    {
       id: "predictify",
       title: "Predictify: Decentralized Prediction Market",
       type: "Web3 / Protocol",
