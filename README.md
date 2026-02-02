@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Senior Web2.5 Architect Portfolio
 
-## Getting Started
+A high-performance, aesthetically precise portfolio designed for senior engineers bridging Web2 systems and Web3 protocols.
 
-First, run the development server:
+![Portfolio Preview](./public/preview.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Overview
+
+This project is a personal branding platform built to demonstrate **architectural discipline**, **modern engineering practices**, and **Web3 fluency**. It features a "Deep Space" dark mode theme, glassmorphism UI elements, and a clean, responsive layout verified for devices ranging from mobile (375px) to 4K Ultra-Wide (3840px).
+
+## 🛠️ Tech Stack
+
+*   **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+*   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+*   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+*   **Icons**: [Lucide React](https://lucide.dev/)
+*   **Package Manager**: [pnpm](https://pnpm.io/)
+
+## 🎨 Design System: "Deep Space"
+
+*   **Colors**: Slate 950 (`#020617`) background with Electric Blue (`#3b82f6`) and Ethereum Purple (`#6366f1`) highlights.
+*   **Typography**: `Inter` (UI) and `JetBrains Mono` (Code/Data).
+*   **Effects**: Glassmorphism strategy (`backdrop-filter: blur`) used for cards and overlays.
+*   **Layout**: `container mx-auto` with `max-w-7xl` constraint for optimal readability on large screens.
+
+## 🏃‍♂️ Getting Started
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/precious-akpan/hybrid-portfolio-new.git
+    cd hybrid-portfolio-new
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    pnpm install
+    ```
+
+3.  **Run the development server**
+    ```bash
+    pnpm dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+4.  **Build for production**
+    ```bash
+    pnpm build
+    pnpm start
+    ```
+
+## 📝 Customization
+
+All personal data, copy, and project details are separated from the UI logic.
+
+**Edit content in:** `data/portfolio.ts`
+
+```typescript
+export const PORTFOLIO_DATA = {
+  personal: {
+    name: "Your Name",
+    role: "Senior Web2.5 Architect",
+    // ...
+  },
+  // ...
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Responsiveness
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application is verified to be fully responsive:
+*   **Mobile**: 375px+
+*   **Tablet**: 768px
+*   **Desktop**: 1024px, 1440px
+*   **Ultra-Wide**: 4k (3840px) - Content remains centered and readable.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📄 License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available under the [MIT License](LICENSE).
