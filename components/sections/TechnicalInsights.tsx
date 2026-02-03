@@ -12,7 +12,7 @@ export const TechnicalInsights = () => {
     <Section id="insights">
       <div className="flex justify-between items-center mb-12">
         <h2 className="text-3xl font-bold">Technical Insights</h2>
-        <a href="#" className="text-blue-400 hover:text-blue-300 flex items-center gap-2 text-sm font-medium transition-colors">
+        <a href="/archive" className="text-blue-400 hover:text-blue-300 flex items-center gap-2 text-sm font-medium transition-colors">
             View All <ArrowRight size={16} />
         </a>
       </div>
@@ -36,12 +36,14 @@ export const TechnicalInsights = () => {
         ))}
         
         {/* Placeholder for 'See More' visual */}
-        <Card className="flex flex-col justify-center items-center text-center p-8 bg-slate-900/30 border border-dashed border-slate-800 hover:border-blue-500/30 transition-colors cursor-pointer group">
-             <div className="p-4 rounded-full bg-slate-800 text-slate-400 group-hover:text-blue-400 group-hover:bg-blue-500/10 transition-colors mb-4">
-                <ArrowRight size={24} />
-             </div>
-             <p className="font-medium text-slate-300">View Full Archive</p>
-             <p className="text-sm text-slate-500 mt-2">Substack & Medium</p>
+        <Card className="flex flex-col justify-center items-center text-center p-8 bg-slate-900/30 border border-dashed border-slate-800 hover:border-blue-500/30 transition-colors cursor-pointer group hover:bg-slate-900/50">
+             <a href="/archive" className="w-full h-full flex flex-col items-center justify-center">
+                <div className="p-4 rounded-full bg-slate-800 text-slate-400 group-hover:text-blue-400 group-hover:bg-blue-500/10 transition-colors mb-4">
+                    <ArrowRight size={24} />
+                </div>
+                <p className="font-medium text-slate-300">View Full Archive</p>
+                <p className="text-sm text-slate-500 mt-2">All Articles</p>
+             </a>
         </Card>
       </div>
     </Section>
