@@ -8,8 +8,16 @@ import { motion } from "framer-motion";
 export default function ArchivePage() {
   const { insights, personal } = PORTFOLIO_DATA;
 
-  // Let"s pretend we have a longer list for the archive
-  const archiveItems = [
+  interface ArchiveItem {
+    title: string;
+    date: string;
+    summary: string;
+    category?: string;
+    link?: string;
+  }
+
+  // Let's pretend we have a longer list for the archive
+  const archiveItems: ArchiveItem[] = [
     ...insights,
     {
         title: "The Death of the Private Key",
